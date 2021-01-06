@@ -2,14 +2,14 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Diagrams/ElkStack Diagram.png](Diagrams/ElkStack Diagram.png)
+![https://github.com/panhiaymoua/ElkStackProject1/blob/main/Diagrams/ElkStack%20Diagram.png](Diagrams/ElkStack Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  _[Elk Install](https://github.com/panhiaymoua/ElkStackProject1/blob/main/Ansible/ELK/elk.yml)_
-  _[DVWA](https://github.com/panhiaymoua/ElkStackProject1/blob/main/Ansible/DVWA/DVWA-playbook.yml)_
-  _[FileBeat](https://github.com/panhiaymoua/ElkStackProject1/blob/main/Ansible/Filebeat/Filebeat-playbook.yml)_
-  _[MetricBeat](https://github.com/panhiaymoua/ElkStackProject1/blob/main/Ansible/Metricbeat/Metricbeat-playbook.yml)_
+  -[Elk Install](https://github.com/panhiaymoua/ElkStackProject1/blob/main/Ansible/ELK/elk.yml)_
+  -[DVWA](https://github.com/panhiaymoua/ElkStackProject1/blob/main/Ansible/DVWA/DVWA-playbook.yml)_
+  -[FileBeat](https://github.com/panhiaymoua/ElkStackProject1/blob/main/Ansible/Filebeat/Filebeat-playbook.yml)_
+  -[MetricBeat](https://github.com/panhiaymoua/ElkStackProject1/blob/main/Ansible/Metricbeat/Metricbeat-playbook.yml)_
 
 This document contains the following details:
 - Description of the Topologu
@@ -78,7 +78,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Images/docker-ps.PNG](Images/docker-ps.png)
+![https://github.com/panhiaymoua/ElkStackProject1/blob/main/Images/docker-ps.PNG](Images/docker-ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -97,17 +97,17 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- _Copy the elk_install.yml file to /etc/ansible/roles/elk_install.yml.
-- _Update the hosts file  file to include the attribute, such as [elk], then include your destination ip of the ELK server directly
-- _Run the playbook, and navigate to ttp://[your_elk_server_ip]:5601/app/kibana to check that the installation worked as expected.
+- Copy the elk_install.yml file to /etc/ansible/roles/elk_install.yml.
+- Update the hosts file  file to include the attribute, such as [elk], then include your destination ip of the ELK server directly
+- Run the playbook, and navigate to ttp://[your_elk_server_ip]:5601/app/kibana to check that the installation worked as expected.
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-- _On the Jump box run the following command to get the playbook: curl https://github.com/panhiaymoua/ElkStackProject1/blob/main/Ansible/ELK/elk.yml
-- _Edit the hosts file in /etc/ansible and add the details and update your IP addresses
-- _Run the playbook: ansible-playbook /etc/ansible/elk.yml
-- _Check your installation is working by visiting http://[your_elk_server_ip]:5601/app/kibana
+- On the Jump box run the following command to get the playbook: curl https://github.com/panhiaymoua/ElkStackProject1/blob/main/Ansible/ELK/elk.yml
+- Edit the hosts file in /etc/ansible and add the details and update your IP addresses
+- Run the playbook: ansible-playbook /etc/ansible/elk.yml
+- Check your installation is working by visiting http://[your_elk_server_ip]:5601/app/kibana
 
 - Installing Filebeats:
-  - _Download the playbook with the following command: curl https://github.com/panhiaymoua/ElkStackProject1/blob/main/Ansible/Filebeat/Filebeat-playbook.yml
-  - _Run the playbook: ansible-playbook /etc/ansible/filebeat-playbook.yml
+  - Download the playbook with the following command: curl https://github.com/panhiaymoua/ElkStackProject1/blob/main/Ansible/Filebeat/Filebeat-playbook.yml
+  - Run the playbook: ansible-playbook /etc/ansible/filebeat-playbook.yml
   
