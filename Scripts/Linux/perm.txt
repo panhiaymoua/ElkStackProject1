@@ -1,0 +1,13 @@
+#!/bin/bash
+
+files=('/etc/shadow' '/etc/passwd' '/etc/host')
+
+for perm in ${files[@]};
+do
+        ls -l $perm
+done
+
+for su in $(ls /home);
+do
+        sudo -lU $su
+done

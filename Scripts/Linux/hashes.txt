@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for file in $(ls ~/Documents/files_for_hashing/*.txt);
+do 
+        sha256sum $file >> ~/hashes.txt
+done 

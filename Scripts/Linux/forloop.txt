@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# list variables
+months=(
+        'january'
+        'febuary'
+        'march'
+        'april'
+        'may'
+        'june'
+        'july'
+        'august'
+        'september'
+        'october'
+        'november'
+        'december'
+)
+days=('mon' 'tues' 'weds' 'thurs' 'fri' 'sat' 'sun')
+
+for i in ${months[@]};
+do
+        echo $i
+done
+
+for h in ${days[@]};
+do
+        if [ $h = 'sun' ] || [ $h = 'sat' ]
+        then
+              echo "It's $h. Take it easy!"
+        else
+              echo "It's $h. Get to WORK!"
+        fi
+
+done
+
+for file in $(ls);
+do
+        ls -lh $file
+done
+
+for num in {0..5};
+do
+         if  [ $num = 1 ] || [ $num = 4 ]
+        then
+                echo $num
+        fi
+done

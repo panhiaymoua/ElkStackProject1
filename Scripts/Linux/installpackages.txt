@@ -1,0 +1,13 @@
+#!/bin/bash
+
+packages=('nano' 'wget' 'net-tools')
+
+for i in ${packages[@]};
+do
+        if [ $(which $i) ]
+        then
+                echo "$i is installed at $(which $i)."
+        else
+                echo "$i is not installed."
+        fi
+done
