@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Diagrams/ElkStack Diagram.png](Diagrams/ElkStack Diagram.png}
+![Diagrams/ElkStack Diagram.png](Diagrams/ElkStack Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -25,13 +25,13 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly realiable, in addition to restricting traffic to the network.
-- _A jumpbox or bastion server serves as a gatway to gain entry into a remote network. Many times the primary mode of access is ssh and without the key access is forbidden
-- _A loadbalancer is meant to serve as a specific point of access for a service that is served by multiple machines. This allows high availability models to function properly
-- _A load balancers can defend an organization against denial-of-service (DDos) attacks. The advantage of having a jumpbox is being able to use a virtual machine that has hardended security and can manage other systems within your security sone or overal network.
+- A jumpbox or bastion server serves as a gatway to gain entry into a remote network. Many times the primary mode of access is ssh and without the key access is forbidden
+- A loadbalancer is meant to serve as a specific point of access for a service that is served by multiple machines. This allows high availability models to function properly
+- A load balancers can defend an organization against denial-of-service (DDos) attacks. The advantage of having a jumpbox is being able to use a virtual machine that has hardended security and can manage other systems within your security sone or overal network.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system resources.
-- _Filebeat monitors the log files or locations that you specify. Filebeat is meant primarily to watch for systemlogs and forward any changes to the Host.
-- _Metricbeat records the metrics and statistics from the operation system and from services running on the server. Metricbeat is used only for gathering metrics adn system resources uage for display.
+- Filebeat monitors the log files or locations that you specify. Filebeat is meant primarily to watch for systemlogs and forward any changes to the Host.
+- Metricbeat records the metrics and statistics from the operation system and from services running on the server. Metricbeat is used only for gathering metrics adn system resources uage for display.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -48,12 +48,12 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _73.242.125.11
+- 73.242.125.11
 
 Machines within the network can only be accessed by the Jumpbox.
-- _The Jump Box VM has access to the ELK VM. 
-    - _The Private IP address of the Jump Box VM is 10.0.0.4 and 
-    - _The Public IP is 52.149.182.120.
+- The Jump Box VM has access to the ELK VM. 
+    - The Private IP address of the Jump Box VM is 10.0.0.4 and 
+    - The Public IP is 52.149.182.120.
 
 A summary of the access policies in place can be found in the table below.
 
@@ -67,18 +67,18 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _Ansible allows IT administrators to automate their daily tasks and save a lot of time. That frees them to focus on efforts that help deliver more value to the business by spending time on more important tasks.
+- Ansible allows IT administrators to automate their daily tasks and save a lot of time. That frees them to focus on efforts that help deliver more value to the business by spending time on more important tasks.
 
 The playbook implements the following tasks:
-- _Install Docker
-- _Install python3-pip
-- _Install Docker python module
-- _Set the vm.max_map_count to 262144
-- _Download and launch a docker Elk container
+- Install Docker
+- Install python3-pip
+- Install Docker python module
+- Set the vm.max_map_count to 262144
+- Download and launch a docker Elk container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Images/docker-ps.png](Images/docker-ps.png)
+![Images/docker-ps.PNG](Images/docker-ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
